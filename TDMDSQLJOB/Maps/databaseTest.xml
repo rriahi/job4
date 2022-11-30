@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/mysql/Tables/employee.xml' outStruct='Structures/customer.xml' inputRep='174' outputRep='177' nextMap='' inputStructUserName='employee' outputStructUserName='customer' V1='4' name='databaseTest' incarnation='358'>
+<root t='190' id='1' V190='11' inStruct='Structures/mysql/Tables/employee.xml' outStruct='Structures/customer.xml' inputRep='174' outputRep='177' nextMap='' inputStructUserName='employee' outputStructUserName='customer' V1='4' name='databaseTest' incarnation='361'>
   <inputMapElem t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='33' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='employee'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='5' V200='8' input='true' rowElem='true' structElemExists='true' usedCount='24' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/mysql/Single Row Tables/employee.xml' V281='13' V1='4' name='Row'>
