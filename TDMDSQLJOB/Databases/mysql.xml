@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='240' id='1' V240='4' databaseType='mysql8' databaseName='test' urlPattern='jdbc:mysql://${hostPort}/${databaseName}' userName='root' password='password' hostPort='localhost:3306' driverClassName='com.mysql.cj.jdbc.Driver' xaDataSourceClassName='com.mysql.cj.jdbc.MysqlDataSource' hibernateDialect='org.hibernate.dialect.MySQL8Dialect' structDir='Structures/mysql' defaultPrimaryKeyColumns='-1' V1='4' name='mysql' incarnation='6'>
+</root>
