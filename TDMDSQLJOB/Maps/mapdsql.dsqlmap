@@ -1,0 +1,221 @@
+{
+    "name": "mapdsql",
+    "inputStructurePath": "/TESTGIT/Structures/customer.xml",
+    "outputStructurePath": "/TESTGIT/Structures/customer.xml",
+    "inputMapElem": {
+        "id": "vu9DEP6b190",
+        "elemType": "RECORD",
+        "name": "customer",
+        "representation": {
+            "name": "JSON",
+            "repConfig": "{\"name\":\"Json\",\"matching\":false,\"encoding\":\"UTF-8\",\"writerBackwardCompatible\":false,\"writerDisableArrayWrapping\":false,\"writerForceArrayWrapping\":false,\"writerNewlineDelimitedJson\":false,\"writerPrettyPrint\":false,\"writerIndentCount\":4,\"writerBufferCapacity\":65536,\"writerOmitNullValues\":false,\"writerOmitEmptyValues\":false,\"writerOmitEmptyArrays\":false,\"writerOmitEmptyObjects\":false}"
+        },
+        "alternativeRepresentations": [{
+            "name": "XML",
+            "repConfig": "{\"name\":\"Xml\",\"omitXMLDeclaration\":false}"
+        }],
+        "mandatory": true,
+        "fields": [
+            {
+                "id": "NFbiwtfJggs",
+                "elemType": "ARRAY",
+                "name": "year",
+                "mandatory": true,
+                "item": {
+                    "id": "iE6LKi6PsCo",
+                    "elemType": "INT",
+                    "name": "year",
+                    "mandatory": true
+                }
+            },
+            {
+                "id": "dMl4yK3oNXg",
+                "elemType": "ARRAY",
+                "name": "customers",
+                "mandatory": true,
+                "item": {
+                    "id": "S5Z82s-kKpk",
+                    "elemType": "RECORD",
+                    "name": "customers",
+                    "mandatory": true,
+                    "fields": [
+                        {
+                            "id": "MLZj2X7Y60E",
+                            "elemType": "STRING",
+                            "name": "name",
+                            "nullable": true
+                        },
+                        {
+                            "id": "BPm02AprYNI",
+                            "elemType": "ARRAY",
+                            "name": "contact",
+                            "mandatory": true,
+                            "item": {
+                                "id": "Xn_eMgyLj_k",
+                                "elemType": "RECORD",
+                                "name": "contact",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "BJeMjnRVAls",
+                                        "elemType": "STRING",
+                                        "name": "phone",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "tIUpNh54Xu8",
+                                        "elemType": "STRING",
+                                        "name": "number",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2oM0DiKJ9nU",
+                            "elemType": "ARRAY",
+                            "name": "address",
+                            "mandatory": true,
+                            "item": {
+                                "id": "lw1VvN2PE7E",
+                                "elemType": "RECORD",
+                                "name": "address",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "ehyPs4Yaeck",
+                                        "elemType": "STRING",
+                                        "name": "type",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "gFYeBNG6-0U",
+                                        "elemType": "STRING",
+                                        "name": "details",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "XUIidm7uYm0",
+                            "elemType": "STRING",
+                            "name": "surname",
+                            "nullable": true
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "outputMapElem": {
+        "id": "qz4ix5CTfUE",
+        "elemType": "RECORD",
+        "name": "customer",
+        "representation": {
+            "name": "JSON",
+            "repConfig": "{\"name\":\"Json\",\"matching\":false,\"encoding\":\"UTF-8\",\"writerBackwardCompatible\":false,\"writerDisableArrayWrapping\":false,\"writerForceArrayWrapping\":false,\"writerNewlineDelimitedJson\":false,\"writerPrettyPrint\":false,\"writerIndentCount\":4,\"writerBufferCapacity\":65536,\"writerOmitNullValues\":false,\"writerOmitEmptyValues\":false,\"writerOmitEmptyArrays\":false,\"writerOmitEmptyObjects\":false}"
+        },
+        "alternativeRepresentations": [{
+            "name": "XML",
+            "repConfig": "{\"name\":\"Xml\",\"omitXMLDeclaration\":false}"
+        }],
+        "mandatory": true,
+        "dsqlFragment": "FROM customer",
+        "fields": [
+            {
+                "id": "ofa66ANMm5s",
+                "elemType": "ARRAY",
+                "name": "year",
+                "mandatory": true,
+                "dsqlFragment": "FROM year\nSELECT year",
+                "item": {
+                    "id": "uRnJTolk5sA",
+                    "elemType": "INT",
+                    "name": "year",
+                    "mandatory": true
+                }
+            },
+            {
+                "id": "10ty76TDXTY",
+                "elemType": "ARRAY",
+                "name": "customers",
+                "mandatory": true,
+                "dsqlFragment": "FROM customers",
+                "item": {
+                    "id": "Fs_p0fkdQFI",
+                    "elemType": "RECORD",
+                    "name": "customers",
+                    "mandatory": true,
+                    "fields": [
+                        {
+                            "id": "_3Vo8huGc8c",
+                            "elemType": "STRING",
+                            "name": "name",
+                            "nullable": true,
+                            "dsqlFragment": "name"
+                        },
+                        {
+                            "id": "fC88qZeR_20",
+                            "elemType": "ARRAY",
+                            "name": "contact",
+                            "mandatory": true,
+                            "item": {
+                                "id": "gTeOQE6jENw",
+                                "elemType": "RECORD",
+                                "name": "contact",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "tKfnRegK1EI",
+                                        "elemType": "STRING",
+                                        "name": "phone",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "X-D0OXCgAgs",
+                                        "elemType": "STRING",
+                                        "name": "number",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fYHQy4n_ND0",
+                            "elemType": "ARRAY",
+                            "name": "address",
+                            "mandatory": true,
+                            "item": {
+                                "id": "BYKcPoqy4_0",
+                                "elemType": "RECORD",
+                                "name": "address",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "eyyBzE_KgOY",
+                                        "elemType": "STRING",
+                                        "name": "type",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "Gp0tvMFT8jU",
+                                        "elemType": "STRING",
+                                        "name": "details",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "9bpRLyDoKKY",
+                            "elemType": "STRING",
+                            "name": "surname",
+                            "nullable": true
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
