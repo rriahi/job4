@@ -1,0 +1,177 @@
+{
+    "name": "maptestdsql",
+    "inputStructurePath": "/TESTGIT/Structures/customer/customer.xml",
+    "outputStructurePath": "/TESTGIT/Structures/datacustomers.xml",
+    "inputMapElem": {
+        "id": "PvaEtl6rOO8",
+        "elemType": "RECORD",
+        "name": "customer",
+        "representation": {
+            "name": "JSON",
+            "repConfig": "{\"name\":\"Json\",\"matching\":false,\"encoding\":\"UTF-8\",\"writerBackwardCompatible\":false,\"writerDisableArrayWrapping\":false,\"writerForceArrayWrapping\":false,\"writerNewlineDelimitedJson\":false,\"writerPrettyPrint\":false,\"writerIndentCount\":4,\"writerBufferCapacity\":65536,\"writerOmitNullValues\":false,\"writerOmitEmptyValues\":false,\"writerOmitEmptyArrays\":false,\"writerOmitEmptyObjects\":false}"
+        },
+        "alternativeRepresentations": [{
+            "name": "XML",
+            "repConfig": "{\"name\":\"Xml\",\"omitXMLDeclaration\":false}"
+        }],
+        "mandatory": true,
+        "fields": [
+            {
+                "id": "ANNWKMFGUSw",
+                "elemType": "ARRAY",
+                "name": "year",
+                "mandatory": true,
+                "item": {
+                    "id": "dqJjlm_zidI",
+                    "elemType": "INT",
+                    "name": "year",
+                    "mandatory": true
+                }
+            },
+            {
+                "id": "nXdkjAo66MY",
+                "elemType": "ARRAY",
+                "name": "customers",
+                "mandatory": true,
+                "item": {
+                    "id": "kWArca8sNNc",
+                    "elemType": "RECORD",
+                    "name": "customers",
+                    "mandatory": true,
+                    "fields": [
+                        {
+                            "id": "jOsexKUinQI",
+                            "elemType": "STRING",
+                            "name": "name",
+                            "nullable": true
+                        },
+                        {
+                            "id": "FZetWkWbKEI",
+                            "elemType": "ARRAY",
+                            "name": "contact",
+                            "mandatory": true,
+                            "item": {
+                                "id": "j3UxIQvgcaE",
+                                "elemType": "RECORD",
+                                "name": "contact",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "Df9j_SB6C9M",
+                                        "elemType": "STRING",
+                                        "name": "phone",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "aaGOjKCiyXM",
+                                        "elemType": "STRING",
+                                        "name": "number",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "D1QTJUfjgpU",
+                            "elemType": "ARRAY",
+                            "name": "address",
+                            "mandatory": true,
+                            "item": {
+                                "id": "gvEs0AYakTA",
+                                "elemType": "RECORD",
+                                "name": "address",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "6G7cKEsELg0",
+                                        "elemType": "STRING",
+                                        "name": "type",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "iWHsGcb1SEY",
+                                        "elemType": "STRING",
+                                        "name": "details",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "iJL8SHh1nWo",
+                            "elemType": "STRING",
+                            "name": "surname",
+                            "nullable": true
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "outputMapElem": {
+        "id": "OFoM1F7TSJ4",
+        "elemType": "RECORD",
+        "name": "datacustomers",
+        "representation": {
+            "name": "JSON",
+            "repConfig": "{\"name\":\"Json\",\"matching\":false,\"encoding\":\"UTF-8\",\"writerBackwardCompatible\":false,\"writerDisableArrayWrapping\":false,\"writerForceArrayWrapping\":false,\"writerNewlineDelimitedJson\":false,\"writerPrettyPrint\":false,\"writerIndentCount\":4,\"writerBufferCapacity\":65536,\"writerOmitNullValues\":false,\"writerOmitEmptyValues\":false,\"writerOmitEmptyArrays\":false,\"writerOmitEmptyObjects\":false,\"readerRequiresLocationTracking\":true}"
+        },
+        "mandatory": true,
+        "dsqlFragment": "FROM customer",
+        "fields": [{
+            "id": "jB9ozSmI834",
+            "elemType": "ARRAY",
+            "name": "Row",
+            "mandatory": true,
+            "dsqlFragment": "FROM customers",
+            "item": {
+                "id": "a8fVNLFjvQU",
+                "elemType": "RECORD",
+                "name": "Row",
+                "mandatory": true,
+                "fields": [
+                    {
+                        "id": "7WP9WpALryE",
+                        "elemType": "STRING",
+                        "name": "CustomerName",
+                        "nullable": true,
+                        "dsqlFragment": "name"
+                    },
+                    {
+                        "id": "Z1TS8uWncF0",
+                        "elemType": "STRING",
+                        "name": "ContactName",
+                        "nullable": true,
+                        "dsqlFragment": "surname"
+                    },
+                    {
+                        "id": "_WDk-cZRmzo",
+                        "elemType": "STRING",
+                        "name": "Address",
+                        "nullable": true,
+                        "dsqlFragment": "contact[0].number"
+                    },
+                    {
+                        "id": "Wdoi_-bB6WE",
+                        "elemType": "STRING",
+                        "name": "City",
+                        "nullable": true
+                    },
+                    {
+                        "id": "GRd-mG12khM",
+                        "elemType": "STRING",
+                        "name": "PostalCode",
+                        "nullable": true,
+                        "dsqlFragment": "concat(address[0].type,address[0].details)"
+                    },
+                    {
+                        "id": "2xUg6wVowOU",
+                        "elemType": "STRING",
+                        "name": "Country",
+                        "nullable": true
+                    }
+                ]
+            }
+        }]
+    }
+}
