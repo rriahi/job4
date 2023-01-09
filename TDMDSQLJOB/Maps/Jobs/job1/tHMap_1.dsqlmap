@@ -1,0 +1,147 @@
+{
+    "name": "tHMap_1",
+    "inputStructurePath": "/TESTGIT/Structures/customer/customer.xml",
+    "outputStructurePath": "/TESTGIT/Structures/Jobs/job1/tHMap_1/out.xml",
+    "inputMapElem": {
+        "id": "-34WnV3Dhmw",
+        "elemType": "RECORD",
+        "name": "customer",
+        "representation": {
+            "name": "JSON",
+            "repConfig": "{\"name\":\"Json\",\"matching\":false,\"encoding\":\"UTF-8\",\"writerBackwardCompatible\":false,\"writerDisableArrayWrapping\":false,\"writerForceArrayWrapping\":false,\"writerNewlineDelimitedJson\":false,\"writerPrettyPrint\":false,\"writerIndentCount\":4,\"writerBufferCapacity\":65536,\"writerOmitNullValues\":false,\"writerOmitEmptyValues\":false,\"writerOmitEmptyArrays\":false,\"writerOmitEmptyObjects\":false}"
+        },
+        "alternativeRepresentations": [],
+        "mandatory": true,
+        "fields": [
+            {
+                "id": "M_RlaUKuX_4",
+                "elemType": "ARRAY",
+                "name": "year",
+                "mandatory": true,
+                "item": {
+                    "id": "mIpFxnAKI28",
+                    "elemType": "INT",
+                    "name": "year",
+                    "mandatory": true
+                }
+            },
+            {
+                "id": "BI7vp0llX_E",
+                "elemType": "ARRAY",
+                "name": "customers",
+                "mandatory": true,
+                "item": {
+                    "id": "y8ovHN6RauA",
+                    "elemType": "RECORD",
+                    "name": "customers",
+                    "mandatory": true,
+                    "fields": [
+                        {
+                            "id": "cffO2NVQPoA",
+                            "elemType": "STRING",
+                            "name": "name",
+                            "nullable": true
+                        },
+                        {
+                            "id": "MvJFlgvye64",
+                            "elemType": "ARRAY",
+                            "name": "contact",
+                            "mandatory": true,
+                            "item": {
+                                "id": "9F72MjoPF2k",
+                                "elemType": "RECORD",
+                                "name": "contact",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "7CDr443mg78",
+                                        "elemType": "STRING",
+                                        "name": "phone",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "GclPyF6Lh8s",
+                                        "elemType": "STRING",
+                                        "name": "number",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "Ped1PD2wUzo",
+                            "elemType": "ARRAY",
+                            "name": "address",
+                            "mandatory": true,
+                            "item": {
+                                "id": "ai7f6010z9U",
+                                "elemType": "RECORD",
+                                "name": "address",
+                                "mandatory": true,
+                                "fields": [
+                                    {
+                                        "id": "5Njj4A4Nwho",
+                                        "elemType": "STRING",
+                                        "name": "type",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "id": "7imD_vT2WpI",
+                                        "elemType": "STRING",
+                                        "name": "details",
+                                        "nullable": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NvKVTKBZDPA",
+                            "elemType": "STRING",
+                            "name": "surname",
+                            "nullable": true
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "outputMapElem": {
+        "id": "gPZ69BQoEUo",
+        "elemType": "RECORD",
+        "name": "root",
+        "representation": {
+            "name": "MAP",
+            "repConfig": "{\"name\":\"Map\"}"
+        },
+        "mandatory": true,
+        "dsqlFragment": "FROM customer",
+        "fields": [{
+            "id": "zGIOsNtPC50",
+            "elemType": "ARRAY",
+            "name": "row",
+            "mandatory": true,
+            "dsqlFragment": "FROM customers",
+            "item": {
+                "id": "ZMriVQDb3jg",
+                "elemType": "RECORD",
+                "name": "row",
+                "mandatory": true,
+                "repProps": {"talend.row.element": "true"},
+                "fields": [
+                    {
+                        "id": "Bqlh9wtTyYY",
+                        "elemType": "STRING",
+                        "name": "newColumn",
+                        "dsqlFragment": "name"
+                    },
+                    {
+                        "id": "_y65FOlxTT0",
+                        "elemType": "STRING",
+                        "name": "newColumn1",
+                        "dsqlFragment": "surname"
+                    }
+                ]
+            }
+        }]
+    }
+}

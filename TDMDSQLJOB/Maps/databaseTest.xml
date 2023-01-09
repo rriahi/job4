@@ -61,7 +61,7 @@
         </child>
         <child t='200' id='23' V200='8' structElemExists='true' usedCount='10' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='details'>
           <mapNode t='190' idref='1'/>
-          <value>DatabaseLookup([column="/TDMDSQLJOB/Databases/mysql.employee.email"],Equal(DatabaseColumn([column="/TDMDSQLJOB/Databases/mysql.employee.iD"],),in$/employee/Row/iD),{Output Column})</value>
+          <value>DatabaseLookup([column="/TESTGIT/Databases/mysql.employee.email"],Equal(DatabaseColumn([column="/TESTGIT/Databases/mysql.employee.iD"],),in$/employee/Row/iD),{Output Column})</value>
         </child>
       </child>
       <child t='200' id='24' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='surname'>
